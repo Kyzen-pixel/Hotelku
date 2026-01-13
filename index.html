@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Mewah</title>
+
+<style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* GLOBAL */
+body {
+  background: #f2f4f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* NAVBAR */
+header {
+  background: #111;
+  color: #fff;
+  padding: 15px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a:hover {
+  color: #f0c040;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+              url('https://images.unsplash.com/photo-1566073771259-6a8506099945') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  margin: 15px 0;
+}
+
+.hero button {
+  padding: 12px 30px;
+  border: none;
+  background: #f0c040;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* SECTION */
+section {
+  padding: 80px 40px;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* KAMAR */
+.rooms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+.room {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+  transition: .3s;
+}
+
+.room:hover {
+  transform: translateY(-5px);
+}
+
+/* FASILITAS */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+
+.feature {
+  background: #fff;
+  padding: 25px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* FORM */
+form {
+  max-width: 400px;
+  margin: auto;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+/* ADMIN */
+.admin {
+  background: #111;
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 500px;
+  margin: auto;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <h2>Hotel Mewah</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#kamar">Kamar</a></li>
+      <li><a href="#fasilitas">Fasilitas</a></li>
+      <li><a href="#pesan">Pesan</a></li>
+      <li><a href="#admin">Admin</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div id="home" class="hero">
+  <div>
+    <h1>Hotel Nyaman & Elegan</h1>
+    <p>Penginapan terbaik untuk liburan Anda</p>
+    <button>Pesan Sekarang</button>
+  </div>
+</div>
+
+<section id="kamar">
+  <h2>Jenis Kamar</h2>
+  <div class="rooms">
+    <div class="room">
+      <h3>Deluxe Room</h3>
+      <p>Rp 500.000 / malam</p>
+      <img src="Stayed at his father Vegas Hotel.jpeg">
+    </div>
+    <div class="room">
+      <h3>Suite Room</h3>
+      <p>Rp 900.000 / malam</p>
+      <img src="kamar.jpeg">
+    </div>
+  </div>
+</section>
+
+<section id="fasilitas">
+  <h2>Fasilitas</h2>
+  <div class="features">
+    <div class="feature">WiFi Gratis</div>
+    <div class="feature">Kolam Renang</div>
+    <div class="feature">Restoran</div>
+    <div class="feature">Parkir Luas</div>
+  </div>
+</section>
+
+<section id="pesan">
+  <h2>Pemesanan</h2>
+  <form>
+    <input type="text" placeholder="Nama Lengkap">
+    <input type="date">
+    <select>
+      <option>Pilih Kamar</option>
+      <option>Deluxe</option>
+      <option>Suite</option>
+    </select>
+    <input type="submit" value="Pesan Sekarang">
+  </form>
+</section>
+
+<section id="admin">
+  <h2>Admin Panel (Simulasi)</h2>
+  <div class="admin">
+    <p>Kelola Data Kamar</p>
+    <p>Lihat Pemesanan</p>
+    <p>Kelola Fasilitas</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Hotel Mewah. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
